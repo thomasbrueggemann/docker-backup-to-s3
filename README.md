@@ -2,6 +2,7 @@ Docker Backup to S3
 ======================
 
 Docker container that periodically backups files to Amazon S3 using [s3cmd sync](http://s3tools.org/s3cmd-sync) and cron.
+
 In addition to the original Dockerfile from https://github.com/istepanov/docker-backup-to-s3 this fork creates a temporary copy of the folder that is supposed to be back'ed up. This helps if the files within the folder change in high frequencies during backup and you want to store a snapshot. s3cmd would otherwise fail due to checksum errors.
 
 ### Usage
