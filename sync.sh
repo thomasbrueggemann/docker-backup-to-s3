@@ -4,6 +4,8 @@ set -e
 
 echo "Job started: $(date)"
 
-/usr/local/bin/s3cmd sync $PARAMS "$DATA_PATH" "$S3_PATH"
+cp "$DATA_PATH" /tmp/data
+/usr/local/bin/s3cmd sync $PARAMS /tmp/data "$S3_PATH"
+rm -R /tmp/data
 
 echo "Job finished: $(date)"

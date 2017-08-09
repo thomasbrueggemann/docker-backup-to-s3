@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Ilya Stepanov <dev@ilyastepanov.com>
+MAINTAINER Thomas Brüggemann <mail@thomasbrueggemann.com>
 
 RUN apt-get update && \
     apt-get install -y python python-pip cron && \
